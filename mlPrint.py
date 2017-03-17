@@ -18,6 +18,16 @@ def printKNNFold(k, weight, accSum, precisionSum, recallSum, time_trainSum, time
     printFold(accSum, precisionSum, recallSum, time_trainSum, time_testSum)
     return
 
+def printRandomTreeFold(e, f, accSum, precisionSum, recallSum, time_trainSum, time_testSum):
+    print()
+    print('--------------------------------')
+    print('              RandomTree estimators' + str(e) + ' features: ' + str(f) + ' - Fold 5')
+    print('--------------------------------')
+    print()
+    printFold(accSum, precisionSum, recallSum, time_trainSum, time_testSum)
+    return
+
+
 
 def printHoldout(acc, precision, recall, time_train, time_test):
 
@@ -41,10 +51,10 @@ def printFold(accSum, precisionSum, recallSum, time_trainSum, time_testSum):
     print()
     return
 
-def printHeader(name, spliter):
+def printHeader(text1="", text2="", text3=""):
     print()
     print('--------------------------------')
-    print('              ' + name + ' - ' + spliter)
+    print('              ' + text1 + ' - ' + text2 + ' - ' + text3)
     print('--------------------------------')
     print()
     return
