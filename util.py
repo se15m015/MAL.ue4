@@ -10,8 +10,9 @@ def calulateMetrics(y_test, y_test_predicted, start_time_train, end_time_train, 
     recall = metrics.recall_score(y_test, y_test_predicted, average="micro")
     time_train = diffToMillisRounded(start_time_train, end_time_train)
     time_test = diffToMillisRounded(start_time_test, end_time_test)
+    confusion_matrix = metrics.confusion_matrix(y_test, y_test_predicted)
 
-    return [acc, precision, recall, time_train, time_test]
+    return [acc, precision, recall, time_train, time_test, confusion_matrix]
 
 def getRandomState():
     # 1510299002 Figl = 29

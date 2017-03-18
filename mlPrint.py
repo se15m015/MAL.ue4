@@ -21,7 +21,7 @@ def printKNNFold(k, weight, accSum, precisionSum, recallSum, time_trainSum, time
 def printRandomTreeFold(e, f, accSum, precisionSum, recallSum, time_trainSum, time_testSum):
     print()
     print('--------------------------------')
-    print('              RandomTree estimators' + str(e) + ' features: ' + str(f) + ' - Fold 5')
+    print('              RandomForrest estimators' + str(e) + ' features: ' + str(f) + ' - Fold 5')
     print('--------------------------------')
     print()
     printFold(accSum, precisionSum, recallSum, time_trainSum, time_testSum)

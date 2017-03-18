@@ -26,6 +26,7 @@ def kNN(data, target):
 
             #Fold 5
             accSum, precisionSum, recallSum, time_trainSum, time_testSum = fold5(data, target, classifier)
+
             printKNNFold(k, weight, accSum, precisionSum, recallSum, time_trainSum, time_testSum)
     return
 
@@ -60,6 +61,7 @@ def decisionTree(data, target, criterion="gini", minWeightFractionLeaf=0, minSam
 
     #Fold 5
     acc, precision, recall, time_train, time_test = fold5(data, target, classifier)
+
     printHeader("Decision Tree", "Fold 5", criterion)
     printFold(acc, precision, recall, time_train, time_test)
 
@@ -76,6 +78,7 @@ def randomForrest(data, target):
 
             # Fold 5
             accSum, precisionSum, recallSum, time_trainSum, time_testSum = fold5(data, target, classifier)
+
             printRandomTreeFold(e, f, accSum, precisionSum, recallSum, time_trainSum, time_testSum)
     return
 
@@ -84,6 +87,7 @@ def SVC(data, target):
 
     # Fold 5
     acc, precision, recall, time_train, time_test = fold5(data, target, classifier)
+
     printHeader("SVC", "Fold 5")
     printFold(acc, precision, recall, time_train, time_test)
     return
@@ -93,6 +97,7 @@ def LinarSVC(data, target):
 
     # Fold 5
     acc, precision, recall, time_train, time_test = fold5(data, target, classifier)
+
     printHeader("LinarSVC", "Fold 5")
     printFold(acc, precision, recall, time_train, time_test)
 
@@ -103,6 +108,7 @@ def naiveBayes(data, target):
 
     # Fold 5
     acc, precision, recall, time_train, time_test = fold5(data, target, classifier)
+
     printHeader("Naive Bayes", "Fold 5")
     printFold(acc, precision, recall, time_train, time_test)
     return
@@ -112,6 +118,7 @@ def perceptron(data, target):
 
     # Fold 5
     acc, precision, recall, time_train, time_test = fold5(data, target, classifier)
+
     printHeader("Perceptron", "Fold 5")
     printFold(acc, precision, recall, time_train, time_test)
     return

@@ -50,12 +50,15 @@ def fold5(data, target, classifier):
         y_test_predicted = classifier.predict(X_test)
         end_time_test = time.time()
 
-        acc, precision, recall, time_train, time_test = calulateMetrics(y_test, y_test_predicted, start_time_train,
+        acc, precision, recall, time_train, time_test, confusion_matrix = calulateMetrics(y_test, y_test_predicted, start_time_train,
                                                                         end_time_train, start_time_test, end_time_test)
         accSum.append(acc)
         precisionSum.append(precision)
         recallSum.append(recall)
         time_trainSum.append(time_train)
         time_testSum.append(time_test)
+
+        print("Confusion Matrix")
+        print(confusion_matrix)
 
     return [accSum, precisionSum, recallSum, time_trainSum, time_testSum]
